@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EFConsole.Entity;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace EFConsole
         }
 
         public DbSet<Donator> Donators { get; set; }
+
+        public DbSet<PayWay> PayWays { get; set; }
     }
 }

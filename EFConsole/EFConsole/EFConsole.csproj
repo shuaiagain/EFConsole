@@ -53,6 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="Entity\Donator.cs" />
+    <Compile Include="Entity\PayWay.cs" />
+    <Compile Include="Initializer.cs" />
+    <Compile Include="Operate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EFConsole
+namespace EFConsole.Entity
 {
     public class Donator
     {

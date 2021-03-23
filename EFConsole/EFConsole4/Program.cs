@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EFConsole3
+namespace EFConsole4
 {
     class Program
     {
         static void Main(string[] args)
         {
             Database.SetInitializer(new Initializer());
-            Operate.ExampleF();
+            Operate.ExampleG();
         }
     }
 }

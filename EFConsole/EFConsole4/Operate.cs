@@ -157,7 +157,97 @@ namespace EFConsole4
                 context.SaveChanges();
             }
         }
+        #endregion
 
+        #region 一对多关系2
+        public static void ExampleH()
+        {
+            using (var context = new Context())
+            {
+                var donatorType = new DonatorType()
+                {
+                    Name = "博客园园友",
+                    Donators = new List<Donator>()
+                    {
+                        new Donator()
+                        { Amount=6,Name="键盘里的鼠标",DonateTime=DateTime.Parse("2021-03-27"),
+                            PayWays=new List<PayWay>{ new PayWay() { Name="支付宝"}, new PayWay() { Name = "微信" } }
+                        }
+                    }
+                };
+
+                var donatorType2 = new DonatorType()
+                {
+                    Name = "非博客园园友",
+                    Donators = new List<Donator>()
+                    {
+                        new Donator()
+                        { Amount=10,Name="待赞助",DonateTime=DateTime.Parse("2021-03-27"),
+                            PayWays=new List<PayWay>{ new PayWay() { Name="支付宝"}, new PayWay() { Name = "微信" } }
+                        }
+                    }
+                };
+
+                context.DonatorTypes.Add(donatorType);
+                context.DonatorTypes.Add(donatorType2);
+
+                context.SaveChanges();
+            }
+        }
+        #endregion
+
+        #region 一对一的关系
+        public static void ExampleI()
+        {
+            using (var context = new Context())
+            {
+
+                var student = new Student()
+                {
+                    CollegeName = "XX大学",
+                    EnrollmentDate = DateTime.Parse("2011-11-11"),
+                    Person = new Person()
+                    {
+                        Name = "Ferb"
+                    }
+                };
+
+                context.Students.Add(student);
+                context.SaveChanges();
+            }
+        }
+        #endregion
+
+        #region 多对多的关系
+        public static void ExampleJ()
+        {
+            using (var context = new Context())
+            {
+                var person = new Person()
+                {
+                    Name = "比尔盖茨"
+                };
+
+                var person2 = new Person()
+                {
+                    Name = "乔布斯"
+                };
+
+                context.Person.Add(person);
+                context.Person.Add(person2);
+
+                var company = new Company()
+                {
+                    CompanyName = "微软"
+                };
+
+                company.Persons.Add(person);
+                company.Persons.Add(person2);
+
+                context.Companies.Add(company);
+                context.SaveChanges();
+            }
+        }
+        #endregion
     }
-    #endregion
 }

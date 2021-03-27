@@ -12,7 +12,10 @@ namespace EFConsole4
         static void Main(string[] args)
         {
             Database.SetInitializer(new Initializer());
-            Operate.ExampleG();
+            //Operate.ExampleG();
+            //Operate.ExampleH();
+            //Operate.ExampleI();
+            Operate.ExampleJ();
         }
     }
 }

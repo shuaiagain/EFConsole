@@ -53,8 +53,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="EntityMap\PersonMap.cs" />
+    <Compile Include="EntityMap\StudentMap.cs" />
     <Compile Include="EntityMap\DonatorMap.cs" />
+    <Compile Include="EntityMap\DonatorTypeMap.cs" />
+    <Compile Include="Entity\Company.cs" />
+    <Compile Include="Entity\Student.cs" />
+    <Compile Include="Entity\Person.cs" />
     <Compile Include="Entity\Donator.cs" />
+    <Compile Include="Entity\DonatorType.cs" />
     <Compile Include="Entity\PayWay.cs" />
     <Compile Include="Initializer.cs" />
     <Compile Include="Operate.cs" />
@@ -64,6 +71,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Doc\1.entity-note.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

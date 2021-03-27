@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,10 +27,25 @@ namespace EFConsole4
 
         public DbSet<PayWay> PayWays { get; set; }
 
+        public DbSet<DonatorType> DonatorTypes { get; set; }
+
+        public DbSet<Person> Person { get; set; }
+
+        public DbSet<Student> Students { get; set; }
+
+        public DbSet<Company> Companies { get; set; }
+
         #region OnModelCreating
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new DonatorMap());
+            modelBuilder.Configurations.Add(new DonatorTypeMap());
+            modelBuilder.Configurations.Add(new StudentMap());
+            modelBuilder.Configurations.Add(new PersonMap());
+
+            //移除级联删除的约定
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             base.OnModelCreating(modelBuilder);
         }
         #endregion

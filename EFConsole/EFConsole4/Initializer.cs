@@ -17,12 +17,12 @@ namespace EFConsole4
         /// <param name="context"></param>
         protected override void Seed(Context context)
         {
-            context.PayWays.AddRange(new List<PayWay>()
-            {
-                new PayWay{Name = "支付宝"},
-                new PayWay{Name = "微信"},
-                new PayWay{Name = "QQ红包"}
-            });
+            //context.PayWays.AddRange(new List<PayWay>()
+            //{
+            //    new PayWay{Name = "支付宝"},
+            //    new PayWay{Name = "微信"},
+            //    new PayWay{Name = "QQ红包"}
+            //});
         }
     }
 }

@@ -137,6 +137,8 @@ namespace EFConsole7
                 #region 分页 
                 Paging(2, 2);
                 #endregion
+
+
             }
 
             Console.WriteLine("Operation completed!");
@@ -152,6 +154,45 @@ namespace EFConsole7
             {
                 var a = context.Donatorsb.OrderBy(o => o.Id).Skip((page - 1) * pageSize).Take(pageSize);
                 Console.WriteLine("paging");
+            }
+        }
+        #endregion
+
+        #region ExampleR
+        public static void ExampleR()
+        {
+            //LINQ中的join和GroupJoin相当于SQL中的Left Outer Join,
+            //无论右边实体集合中是否包含任何实体，它总是会返回左边集合的所有元素
+            //各种连接
+            using (var context = new DonatorsContext())
+            {
+                var a = from q in context.Provinces
+                        join dn in context.Donatorsb on q.Id equals dn.Province.Id
+                        into qdn
+                        select new
+                        {
+                            ProvinceName = q.ProvinceName,
+                            //注意，这里的donatorList是属于某个省份的所有打赏者，
+                            //很多人会误解为这是两张表join之后的结果集
+                            DonatorList = qdn
+                        };
+
+
+                var a2 = context.Provinces.GroupJoin(
+                    //Provinces集合要连接的Donators实体集合
+                    context.Donatorsb,
+                    //左表要连接的键
+                    left => left.Id,
+                    //右表要连接的键
+                    right => right.Province.Id,
+                    //返回的结果集
+                    (left, group) => new
+                    {
+                        ProvinceName = left.ProvinceName,
+                        DonatorList = group
+                    });
+
+                Console.WriteLine("ExampleR");
             }
         }
         #endregion

@@ -16,5 +16,9 @@ namespace EFConsole7
         }
 
         public virtual DbSet<Donator> Donators { get; set; }
+
+        public virtual DbSet<Donatorb> Donatorsb { get; set; }
+
+        public virtual DbSet<Province> Provinces { get; set; }
     }
 }

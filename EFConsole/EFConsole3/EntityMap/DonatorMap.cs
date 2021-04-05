@@ -1,4 +1,4 @@
-﻿using EFConsole3.Entity;
+﻿    using EFConsole3.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;

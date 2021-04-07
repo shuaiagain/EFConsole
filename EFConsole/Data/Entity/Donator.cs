@@ -16,5 +16,7 @@ namespace Data.Entity
         public Province Province { get; set; }
 
         public int ProvinceId { get; set; }
+
+        public DateTime CreateTime { get; set; }
     }
 }

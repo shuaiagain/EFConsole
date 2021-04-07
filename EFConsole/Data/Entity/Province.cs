@@ -18,5 +18,7 @@ namespace Data.Entity
         [StringLength(10)]
         public string ProvinceName { get; set; }
         public virtual ICollection<Donator> Donators { get; set; }
+
+        public DateTime CreateTime { get; set; }
     }
 }

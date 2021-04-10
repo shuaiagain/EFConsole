@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Donator_Add_CreateTime : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
@@ -28,6 +28,7 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         ProvinceName = c.String(maxLength: 10),
+                        CreateTime = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

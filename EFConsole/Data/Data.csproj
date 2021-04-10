@@ -54,13 +54,25 @@
     <Compile Include="Context.cs" />
     <Compile Include="Entity\Province.cs" />
     <Compile Include="Entity\Donator.cs" />
-    <Compile Include="Migrations\202104071356404_Donator_Add_CreateTime.cs" />
-    <Compile Include="Migrations\202104071356404_Donator_Add_CreateTime.designer.cs">
-      <DependentUpon>202104071356404_Donator_Add_CreateTime.cs</DependentUpon>
+    <Compile Include="Migrations\202104100853496_InitialMigration.cs" />
+    <Compile Include="Migrations\202104100853496_InitialMigration.designer.cs">
+      <DependentUpon>202104100853496_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104071400504_Donator_Add_CreateTime1.cs" />
-    <Compile Include="Migrations\202104071400504_Donator_Add_CreateTime1.designer.cs">
-      <DependentUpon>202104071400504_Donator_Add_CreateTime1.cs</DependentUpon>
+    <Compile Include="Migrations\202104100911302_Donator_Remove_CreateTime.cs" />
+    <Compile Include="Migrations\202104100911302_Donator_Remove_CreateTime.designer.cs">
+      <DependentUpon>202104100911302_Donator_Remove_CreateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104100926179_Donator_Add_CreateTime.cs" />
+    <Compile Include="Migrations\202104100926179_Donator_Add_CreateTime.designer.cs">
+      <DependentUpon>202104100926179_Donator_Add_CreateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104100940081_Donator_Modify_Name_Length.cs" />
+    <Compile Include="Migrations\202104100940081_Donator_Modify_Name_Length.designer.cs">
+      <DependentUpon>202104100940081_Donator_Modify_Name_Length.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104100941392_Donator_Name_Add_Index.cs" />
+    <Compile Include="Migrations\202104100941392_Donator_Name_Add_Index.designer.cs">
+      <DependentUpon>202104100941392_Donator_Name_Add_Index.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,11 +82,23 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104071356404_Donator_Add_CreateTime.resx">
-      <DependentUpon>202104071356404_Donator_Add_CreateTime.cs</DependentUpon>
+    <Content Include="Doc\迁移.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104100853496_InitialMigration.resx">
+      <DependentUpon>202104100853496_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104071400504_Donator_Add_CreateTime1.resx">
-      <DependentUpon>202104071400504_Donator_Add_CreateTime1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104100911302_Donator_Remove_CreateTime.resx">
+      <DependentUpon>202104100911302_Donator_Remove_CreateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104100926179_Donator_Add_CreateTime.resx">
+      <DependentUpon>202104100926179_Donator_Add_CreateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104100940081_Donator_Modify_Name_Length.resx">
+      <DependentUpon>202104100940081_Donator_Modify_Name_Length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104100941392_Donator_Name_Add_Index.resx">
+      <DependentUpon>202104100941392_Donator_Name_Add_Index.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

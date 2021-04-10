@@ -7,13 +7,13 @@ namespace Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Donator_Add_CreateTime1 : IMigrationMetadata
+    public sealed partial class Donator_Remove_CreateTime : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Donator_Add_CreateTime1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Donator_Remove_CreateTime));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104071400504_Donator_Add_CreateTime1"; }
+            get { return "202104100911302_Donator_Remove_CreateTime"; }
         }
         
         string IMigrationMetadata.Source
